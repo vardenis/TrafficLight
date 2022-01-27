@@ -16,11 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-QQ-DM4">
-                                <rect key="frame" x="173.5" y="771" width="67.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="START"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="izK-gA-oTP">
                                 <rect key="frame" x="134" y="106" width="146" height="492"/>
                                 <subviews>
@@ -50,18 +45,32 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-QQ-DM4">
+                                <rect key="frame" x="173.5" y="666" width="67.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="START"/>
+                                <connections>
+                                    <action selector="colorSwitching" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2w-8B-jm7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xdW-QQ-DM4" secondAttribute="bottom" constant="60" id="Csy-Cq-MdR"/>
+                            <constraint firstItem="xdW-QQ-DM4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="900" constant="622" id="I5R-cl-U5A"/>
                             <constraint firstItem="izK-gA-oTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KKy-wF-ACr"/>
                             <constraint firstItem="xdW-QQ-DM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YFV-0F-K43"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="izK-gA-oTP" secondAttribute="bottom" priority="900" constant="264" id="dv9-jh-GEm"/>
-                            <constraint firstItem="izK-gA-oTP" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="xDe-NM-jpZ"/>
-                            <constraint firstItem="xdW-QQ-DM4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="900" constant="727" id="yo6-Zg-E02"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xdW-QQ-DM4" secondAttribute="bottom" constant="30" id="nLo-9A-lE8"/>
+                            <constraint firstItem="izK-gA-oTP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="xDe-NM-jpZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonActionTitle" destination="xdW-QQ-DM4" id="mKo-AG-Xz0"/>
+                        <outlet property="greenLight" destination="nQG-vs-Wyx" id="C1s-No-5fC"/>
+                        <outlet property="orangeLight" destination="Vdb-lX-lq4" id="MVM-lQ-fsI"/>
+                        <outlet property="redLight" destination="qjD-zU-dBm" id="Twx-yL-45d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
